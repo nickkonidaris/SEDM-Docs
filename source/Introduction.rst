@@ -12,7 +12,6 @@ We argue that the present approach of using "low" resolution spectrographs (:mat
 .. figure:: Layout.jpg
 
     SED Machine spectrograph instrument layout.
-    Test of caption
 
 
 History
