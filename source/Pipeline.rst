@@ -127,6 +127,7 @@ Twilight flats for the IFU + RC:
 
 .. _ss-dataflow:
 
+
 The Flow of Data
 ^^^^^^^^^^^^^^^^
 
@@ -190,7 +191,7 @@ Running the Pipeline
 
 The pipeline lives on pharos.caltech.edu, its repository can be found at https://github.com/nickkonidaris/kpy (the SEDMr repository).
 
-I _strongly_ recommend that you connect to pharos via VNC. If your connection closes, this allows you to preserve state.
+I _strongly_ recommend that you connect to pharos via VNC. If your connection closes, this allows you to preserve state and long-running commands are not shutdown.
 
 One can execute a "SED Machine verison of Python" as follows ::
 
@@ -199,14 +200,15 @@ One can execute a "SED Machine verison of Python" as follows ::
 The following steps must be followed:
 
 1. Create a directory to put output data::
+
     pharos> mkdir /scr2/npk/cd /scr2/npk/sedm/OUTPUT/
 
 2. Copy data from the RAW directory to the output directory. This is a bit confusing because files are labeled with local time, so they're split into two directories. Thus you must use the Mover command::
 
     # Do this to reduce date on Mar 25 2015
     pharos> cd /scr2/npk/sedm/OUTPUT/
-    pharos> ~npk/spy /scr2/npk/sedm/raw/2015mar25/ifu*fits .
-    pharos> ~npk/spy /scr2/npk/sedm/raw/2015mar26/ifu*fits .
+    pharos> ~npk/spy move /scr2/npk/sedm/raw/2015mar25/ifu*fits .
+    pharos> ~npk/spy move /scr2/npk/sedm/raw/2015mar26/ifu*fits .
         OUTPUT ....
     pharos> ls
     2015mar24 2015mar25 2015mar26
