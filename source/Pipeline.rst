@@ -234,7 +234,7 @@ The following steps must be followed:
     # Now cosmic ray reject:
     pharos> make -j4 crrs
     # Cosmic ray reject is buggy. Keep using the unix top command to see
-    # if any process has been running for more than 20 minutes. If it has,#
+    # if any process has been running for more than 20 minutes. If it has
     # you must kill the offending process
 
     # Now create the wavelength solution. The first two steps are a few minute.
@@ -260,7 +260,7 @@ The following steps must be followed:
 
 #. It's worth performing the following checks. HINT: During the course of the night, make sure you rune the Check.py routine to ensure the spectrograph is in focus.
 
-    1. Check that the dome.fits file and dome_seg.fits file correspond by opening both in ds9. For instance, the following image shows good agreement:
+    1. Check that the dome.fits file and seg_dome.fits file correspond by opening both in ds9. For instance, the following image shows good agreement:
 
     .. figure:: dome.jpg
 
